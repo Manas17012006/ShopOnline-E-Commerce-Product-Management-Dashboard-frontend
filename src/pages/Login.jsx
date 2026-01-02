@@ -74,7 +74,7 @@ const Login = () => {
         {
           setMode("Login");
           toast.success("Sending otp on your email!")
-          senVerification();
+          await senVerification();
         }
         else {toast.error(data.message);setDone(false);}
       }
