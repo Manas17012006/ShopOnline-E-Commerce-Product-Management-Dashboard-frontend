@@ -1,0 +1,137 @@
+/* ===== Layout ===== */
+.container {
+  display: flex;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* ===== Image Section ===== */
+.first {
+  width: 400px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.arrow {
+  cursor: pointer;
+  font-size: 38px;
+  user-select: none;
+  color: #333;
+}
+
+.imageWrapper {
+  flex: 1;
+}
+
+.imageWrapper img {
+  width: 100%;
+  aspect-ratio: 0.7;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== Product Info ===== */
+.second {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.title {
+  font-size: 26px;
+  font-weight: 600;
+  color: #222;
+}
+
+/* ===== Price Section ===== */
+.priceBox {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 8px 0;
+}
+
+.discountedPrice {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000;
+}
+
+.originalPrice {
+  font-size: 18px;
+  color: #777;
+  text-decoration: line-through;
+}
+
+.discount {
+  font-size: 16px;
+  font-weight: 600;
+  color: #388e3c;
+}
+
+/* ===== Description ===== */
+.featureTitle {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.description {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ===== Button ===== */
+.cartBtn {
+  width: 220px;
+  padding: 12px;
+  margin-top: 20px;
+  background-color: #ff3f6c;
+  color: white;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cartBtn:hover {
+  background-color: #e7335d;
+}
+
+/* ===== Extra Info ===== */
+.extraInfo {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #444;
+}
+
+.extraInfo p {
+  margin-bottom: 6px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .first {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .second {
+    width: 100%;
+  }
+
+  .cartBtn {
+    width: 100%;
+  }
+}

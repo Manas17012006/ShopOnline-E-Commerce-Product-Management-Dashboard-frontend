@@ -1,0 +1,79 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #6c63ff, #4a42d4);
+}
+
+.card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 14px;
+  width: 100%;
+  max-width: 380px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.otpInputs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.otpInputs input {
+  width: 48px;
+  height: 55px;
+  font-size: 1.5rem;
+  text-align: center;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.otpInputs input:focus {
+  border-color: #6c63ff;
+  box-shadow: 0 0 0 2px rgba(108, 99, 255, 0.2);
+}
+
+.card button {
+  width: 100%;
+  padding: 12px;
+  background: #6c63ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.card button:hover {
+  background: #5a52e0;
+}
+
+.resend {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #6c63ff;
+  cursor: pointer;
+}
+
+.resend:hover {
+  text-decoration: underline;
+}

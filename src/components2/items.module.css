@@ -1,0 +1,100 @@
+.itemContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 15px 20px;
+  border-bottom: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+}
+
+.itemContainer:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.productInfo {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.productName {
+  margin: 0 0 6px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+}
+
+.productPrice {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.quantitySection {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 5px;
+}
+
+.quantityLabel {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.quantityInput {
+  width: 60px;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 14px;
+}
+
+button {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.deleteBtn {
+  background: #ff4d4f;
+  color: #fff;
+  margin-top: 5px;
+}
+
+.deleteBtn:hover {
+  background: #e63946;
+}
+
+.setQtyBtn {
+  background: #1890ff;
+  color: #fff;
+}
+
+.setQtyBtn:hover {
+  background: #1572d1;
+}
+
+/* Responsive tweaks */
+@media screen and (max-width: 480px) {
+  .itemContainer {
+    padding: 12px 15px;
+  }
+  .quantityInput {
+    width: 50px;
+  }
+  button {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+}

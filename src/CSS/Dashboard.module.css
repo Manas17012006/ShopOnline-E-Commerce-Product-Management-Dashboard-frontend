@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Hand&family=Outfit:wght@100..900&family=Prata&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+.big
+{
+   background: linear-gradient(135deg, #9ab7f5, #e9d1ef);
+}
+.bigdiv
+{
+    width:80vw;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    margin:70px auto ;
+    border:2px solid gray;
+    justify-content: space-between;
+}
+.first
+{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.second img
+{
+    width:100%;
+    aspect-ratio:1.1;
+}
+.f11
+{
+    display: inline-block;
+    width:90px;
+    height:3px;
+    margin-bottom:5px;
+    background-color: black;
+}
+.f1{
+    font-size: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom:20px;
+}
+.f2
+{
+    font-size:40px;
+    font-family: "Prata", serif;
+    font-weight: 700;
+    margin-bottom:20px;
+}
+.f33
+{
+    display: inline-block;
+    width:70px;
+    height:1px;
+    margin-bottom:5px;
+    background-color: black;
+}
+@media (max-width:1000px)
+{
+    .bigdiv
+    {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}
+
+.f4 {
+    width:fit-content;
+  margin: 20px auto 40px;
+  font-size:30px;
+  font-weight: 600;
+}
+.tech
+{
+    width:fit-content;
+    margin: 30px auto;
+   align-items: center;
+   justify-content: center;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+.item img
+{
+    width:250px;
+    aspect-ratio:0.8;
+    transition: transform 0.5s ease-in-out;
+    box-shadow: 5px 4px 12px rgba(0, 0, 0, 0.12);
+}
+.item img:hover{
+    transform: scale(1.05) translateY(-1px);
+    cursor: pointer;
+}
+@media (max-width:1200px)
+{
+    .tech{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows:1fr 1fr;
+        align-items: center;
+        justify-content: center;
+    }
+}
+@media (max-width:550px)
+{
+    .f1
+    {
+        font-size:15px;
+    }
+    .f2{
+        font-size:20px;
+    }
+    .f3
+    {
+        font-size:15px;
+    }
+    .tech{
+        grid-template-rows:1fr 1fr 1fr 1fr;
+        grid-template-columns: none;
+        align-items: center;
+        justify-content: center;
+    }
+}

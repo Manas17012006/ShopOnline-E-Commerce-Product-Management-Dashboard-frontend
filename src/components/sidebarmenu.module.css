@@ -1,0 +1,40 @@
+.bigdiv {
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    width: 250px;     
+    height: 100vh;
+
+    background-color: white;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: all 2sec ease;
+    z-index: 1000;
+}
+
+.collection
+{
+    text-decoration: none;
+    color:black;
+    border-bottom:2px solid gray;
+}
+.active
+{
+    background-color: rgb(164, 160, 160);
+}
+.span
+{
+    color:gray;
+}
+.back
+{
+    border-bottom:2px solid gray;
+}
+.nodisplay
+{
+    display: none;
+}

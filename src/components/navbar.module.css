@@ -1,0 +1,32 @@
+.nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 0 20px;
+    /* position: absolute; */
+    background: linear-gradient(135deg,#cec5f2,#9a92f7);
+   
+    box-shadow: 5px 10px 14px 0px rgba(0, 0, 0, 0.5); 
+    
+}
+.btn
+{
+    background-color:rgb(255, 255, 255);
+    padding:7px;
+    border-radius:15px;
+    font-size:20px;
+    margin:20px;
+    color:black;
+    border: none;
+    box-shadow: 5px 3px 14px 0px rgba(0, 0, 0, 0.5); 
+}
+.btn:hover{
+    cursor: pointer; background-color: rgb(232, 232, 237);
+}
+.shop
+{
+    
+    font-size:40px;
+}

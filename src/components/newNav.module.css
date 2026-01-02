@@ -1,0 +1,89 @@
+.nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 0 20px;
+    background: linear-gradient(135deg,#cec5f2,#9a92f7);
+    box-shadow: 5px 10px 14px 0px rgba(0, 0, 0, 0.5); 
+    
+}
+.btn
+{
+    background-color:rgb(255, 255, 255);
+    padding:7px;
+    border-radius:15px;
+    font-size:20px;
+    margin:20px;
+    color:black;
+    border: none;
+    height:50px;
+    box-shadow: 5px 3px 14px 0px rgba(0, 0, 0, 0.5); 
+}
+.btn:hover{
+    cursor: pointer; background-color: rgb(232, 232, 237);
+}
+.shop
+{
+    
+    font-size:40px;
+}
+.menu
+{
+    display:none;
+}
+.bigdiv
+{
+    display: flex;
+    align-items: center;
+    gap:20px;
+
+}
+.small
+{
+    padding:20px;
+}
+.collection
+{
+    text-decoration: none;
+    color: black;
+}
+.collection:hover{
+    cursor: pointer;
+   
+}
+.small img:hover{
+    cursor:pointer;
+}
+.active
+{
+    border-bottom: 3px solid black;
+}
+@media (max-width:1000px)
+{
+    .collection
+    {
+        display:none;
+    }
+    .menu{
+        display: block;
+    }
+    .bigdiv
+    {
+        gap:0px;
+    }
+    .small img{
+        width:30px;
+        height:30px;
+        padding:none;
+    }
+    .btn{
+        margin:5px;
+        font-size:15px;
+        padding:3px;
+    }
+    .shop{
+        font-size:20px;
+    }
+}
