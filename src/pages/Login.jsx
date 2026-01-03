@@ -95,7 +95,8 @@ const Login = () => {
   return (
     
     <div style={{ minHeight: "100vh", display: "flex", justifyContent: "center", alignItems: "center", background:"linear-gradient(135deg,#cec5f2,#9a92f7)"}}>
-      {done ? <Loading status={"Sending otp"}/> : null}
+      {(done && mode!=="Signup")? <Loading status={"Sending otp"}/> : null}
+      {(done && mode==="Signup")? <Loading status={"Registering You"}/> : null}
       <div style={{position:"fixed",top:"20px",left:"20px", fontSize:"40px", cursor:"pointer" }} onClick={()=>navigate("/")}>ShopOnline</div>
       <div
         style={{
