@@ -73,6 +73,8 @@ const Login = () => {
           if(data.success)
         {
           setMode("Login");
+          localStorage.setItem("token", data.token);
+          localStorage.setItem("userId", data.user.id);
           toast.success("Sending otp on your email!")
           await senVerification();
         }
