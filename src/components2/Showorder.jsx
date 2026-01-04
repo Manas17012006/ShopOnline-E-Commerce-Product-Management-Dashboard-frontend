@@ -9,10 +9,10 @@ const Showorder = () => {
     },[])
   return (
     <div>
-        {orderData.map((item)=>{
-            return <Showorderindividual item={item}/>
-        })}
-    </div>
+    {[...orderData].reverse().map((item) => (
+      <Showorderindividual key={item._id} item={item} />
+    ))}
+  </div>
   )
 }
 
