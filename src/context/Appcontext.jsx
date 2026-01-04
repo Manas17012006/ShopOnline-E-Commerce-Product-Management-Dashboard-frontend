@@ -1,7 +1,7 @@
 import axios from "axios";
 import { createContext, useState, useEffect } from "react";
 import { toast } from "react-toastify";
-
+import api from "../utilities/axios"
 export const Appcontext = createContext();
 
 export const AppcontextProvider = (props) => {
@@ -15,7 +15,7 @@ export const AppcontextProvider = (props) => {
   const [orderData,setOrderData]=useState([]);
   const getUserData = async () => {
     try {
-      const { data } = await axios.get(
+      const { data } = await api.get(
         backendUrl + "/api/auth/getUserData",
         { withCredentials: true }
       );
@@ -34,7 +34,7 @@ export const AppcontextProvider = (props) => {
   const fetchAdmins = async () => {
     try {
       axios.defaults.withCredentials = true;
-      const { data } = await axios.get(
+      const { data } = await api.get(
         backendUrl + "/api/auth/getnoAdmins"
       );
 
@@ -49,7 +49,7 @@ export const AppcontextProvider = (props) => {
   const fetchProducts = async () => {
     try {
       axios.defaults.withCredentials = true;
-      const { data } = await axios.get(
+      const { data } = await api.get(
         backendUrl + "/api/product/list"
       );
 
@@ -65,7 +65,7 @@ const getcartdata=async ()=>{
   try{
 
     axios.defaults.withCredentials = true;
-      const { data } = await axios.get(
+      const { data } = await api.get(
         backendUrl + "/api/product/getcartdata"
       );
 
@@ -86,7 +86,7 @@ const getorderdata=async ()=>{
   try{
 
     axios.defaults.withCredentials = true;
-      const { data } = await axios.get(
+      const { data } = await api.get(
         backendUrl + "/api/order/orders"
       );
 

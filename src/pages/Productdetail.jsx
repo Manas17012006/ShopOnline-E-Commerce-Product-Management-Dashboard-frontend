@@ -7,6 +7,7 @@ import Footer from "../components/Footer";
 import styles from "../CSS/productdetail.module.css";
 import { toast } from "react-toastify";
 import axios from "axios";
+import api from "../utilities/axios"
 
 const ProductDetail = () => {
   const { id } = useParams();
@@ -48,7 +49,7 @@ const ProductDetail = () => {
      try{
         setAdd(true);
         axios.defaults.withCredentials=true;
-        const {data}=await axios.post(backendUrl+"/api/product/addtocart",{productId:id,qty:1});
+        const {data}=await api.post(backendUrl+"/api/product/addtocart",{productId:id,qty:1});
         if(data.success)
         {
            setAdd(false);

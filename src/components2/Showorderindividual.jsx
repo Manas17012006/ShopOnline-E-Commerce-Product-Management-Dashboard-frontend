@@ -3,6 +3,7 @@ import styles from "./showIndividualorder.module.css";
 import { toast } from "react-toastify";
 import { Appcontext } from "../context/Appcontext";
 import axios from "axios";
+import api from "../utilities/axios"
 import Loading from "../components/Loading";
 
 const Showorderindividual = ({ item }) => {
@@ -16,7 +17,7 @@ const Showorderindividual = ({ item }) => {
     setLoad(true);
     try {
       axios.defaults.withCredentials = true;
-      const { data } = await axios.post(
+      const { data } = await api.post(
         backendUrl + "/api/order/changeOrderStatus",
         { orderId: item._id, status }
       );

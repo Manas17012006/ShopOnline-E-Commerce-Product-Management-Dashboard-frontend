@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "../components/Emailverify.module.css";
 import { toast } from "react-toastify";
 import axios from "axios";
+import api from "../utilities/axios"
 import { useContext } from "react";
 import { Appcontext } from "../context/Appcontext";
 import { useNavigate } from "react-router";
@@ -42,7 +43,7 @@ const Emailverify = () => {
     e.preventDefault();
     try{
       axios.defaults.withCredentials=true;
-      const {data}=await axios.post(backendUrl+'/api/auth/verify-account',{otp:otp.join("")});
+      const {data}=await api.post(backendUrl+'/api/auth/verify-account',{otp:otp.join("")});
       if(data.success)
       {
          setDone(false);

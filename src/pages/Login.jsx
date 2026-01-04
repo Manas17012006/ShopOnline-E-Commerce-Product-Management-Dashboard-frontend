@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router";
 import { Appcontext } from "../context/Appcontext";
 import axios from 'axios'
+import api from "../utilities/axios";
 import {toast} from 'react-toastify'
 import Loading from "../components/Loading";
 const Login = () => {
@@ -18,7 +19,7 @@ const Login = () => {
     try{
       setDone(true);
       axios.defaults.withCredentials=true;
-      const {data}=await axios.post(backendUrl+'/api/auth/send-verify-otp')
+      const {data}=await api.post(backendUrl+'/api/auth/send-verify-otp')
       if(data.success)
       {
         setDone(false);
@@ -55,7 +56,7 @@ const Login = () => {
       {
           toast("Registering");
         
-        const {data}=await axios.post(backendUrl+'/api/auth/register',formData)
+        const {data}=await api.post(backendUrl+'/api/auth/register',formData)
           if(data.success)
         {
           setDone(false);
@@ -66,7 +67,7 @@ const Login = () => {
       
       else
       {
-        const {data}=await axios.post(backendUrl+'/api/auth/login',{
+        const {data}=await api.post(backendUrl+'/api/auth/login',{
         email: formData.email,
         password: formData.password
       });

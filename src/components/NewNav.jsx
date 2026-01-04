@@ -4,6 +4,7 @@ import { NavLink, useNavigate } from "react-router";
 import { useContext } from "react";
 import { Appcontext } from "../context/Appcontext";
 import axios from "axios";
+import api from "../utilities/axios"
 import cartImg from "../assets/cart.png";
 import { toast } from "react-toastify";
 import menuImg from "../assets/menu.png"
@@ -17,7 +18,7 @@ const NewNav = () => {
   const navigate = useNavigate();
   const handleLogout = async () => {
   try {
-    const { data } = await axios.post(
+    const { data } = await api.post(
       backendUrl + "/api/auth/logout",
       {},
       { withCredentials: true } 
@@ -25,6 +26,9 @@ const NewNav = () => {
     console.log(data);
     if (data.success) {
       setIsLoggedin(false);
+      localStorage.removeItem("token");
+      localStorage.removeItem("userId");
+
       navigate("/");
       toast.success(data.message);
     }

@@ -3,6 +3,7 @@ import { Appcontext } from "../context/Appcontext";
 import styles from "./items.module.css"; 
 import { toast } from "react-toastify";
 import axios from "axios";
+import api from "../utilities/axios"
 import Loading from "../components/Loading";
 
 const ShowcartItems = ({ item}) => {
@@ -26,7 +27,7 @@ const {backendUrl,getcartdata}=useContext(Appcontext)
     try{
          setFlag(true);
         axios.defaults.withCredentials=true;
-        const {data}=await axios.post(backendUrl+"/api/product/delete",{productId:item.productId});
+        const {data}=await api.post(backendUrl+"/api/product/delete",{productId:item.productId});
         if(data.success)
         {
             setFlag(false);
@@ -50,7 +51,7 @@ const {backendUrl,getcartdata}=useContext(Appcontext)
     try{
         setFlag(true);
         axios.defaults.withCredentials=true;
-        const {data}=await axios.post(backendUrl+"/api/product/change",{productId:item.productId,qty:qty});
+        const {data}=await api.post(backendUrl+"/api/product/change",{productId:item.productId,qty:qty});
         if(data.success)
         {
              setFlag(false);

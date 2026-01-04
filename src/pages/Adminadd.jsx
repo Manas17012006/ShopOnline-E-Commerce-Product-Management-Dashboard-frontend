@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import styles from "../CSS/adminadd.module.css";
 import { useState } from "react";
 import axios from "axios";
+import api from "../utilities/axios";
 import { useContext } from "react";
 import { Appcontext } from "../context/Appcontext";
 import { toast } from "react-toastify";
@@ -42,7 +43,7 @@ const Adminadd = () => {
       console.log(fd);
       toast.success("Adding product");
         setDone(true);
-      const {data}= await axios.post(backendUrl + "/api/product/add", fd, {
+      const {data}= await api.post(backendUrl + "/api/product/add", fd, {
         headers: {
           "Content-Type": "multipart/form-data",
         },

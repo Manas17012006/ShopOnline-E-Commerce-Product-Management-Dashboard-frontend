@@ -3,6 +3,7 @@ import NewNav from "../components/NewNav";
 import { Appcontext } from "../context/Appcontext";
 import styles from "../CSS/order.module.css";
 import axios from "axios";
+import api from "../utilities/axios"
 import { toast } from "react-toastify";
 import Loading from "../components/Loading";
 
@@ -47,7 +48,7 @@ const Order = () => {
         price:total,
         orderData:cartData
       }
-        const {data}=await axios.post(backendUrl+"/api/order/setOrder",newObj)
+        const {data}=await api.post(backendUrl+"/api/order/setOrder",newObj)
         if(data.success)
         {
           toast.success("Order Placed");

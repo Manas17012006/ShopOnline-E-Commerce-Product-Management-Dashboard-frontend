@@ -1,4 +1,5 @@
 import axios from 'axios';
+import api from "../utilities/axios"
 import React, { useContext } from 'react';
 import { toast } from 'react-toastify';
 import { Appcontext } from '../context/Appcontext';
@@ -11,7 +12,7 @@ const Showindividual = ({ user }) => {
         const userObj={userId:user._id};
         axios.defaults.withCredentials=true;
         try{
-            const {data}=await axios.post(backendUrl+'/api/auth/makeAdmin',userObj);
+            const {data}=await api.post(backendUrl+'/api/auth/makeAdmin',userObj);
             if(data.success)
             {
                 toast.success(`${user.name} is now a Admin`);

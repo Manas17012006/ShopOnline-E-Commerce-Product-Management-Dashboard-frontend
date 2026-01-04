@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { Appcontext } from "../context/Appcontext";
 import { toast } from "react-toastify";
 import axios from "axios";
+import api from "../utilities/axios"
 import Loading from "./Loading";
 
 const ShowIndividualproduct = ({ product, onDelete }) => {
@@ -11,7 +12,7 @@ const ShowIndividualproduct = ({ product, onDelete }) => {
     {
         setDone(true);
         try{
-            const {data}=await axios.post(backendUrl+"/api/product/remove",{id:product._id});
+            const {data}=await api.post(backendUrl+"/api/product/remove",{id:product._id});
             if(data.success)
             {
                 setDone(false);
