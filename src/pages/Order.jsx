@@ -120,7 +120,7 @@ const Order = () => {
       </div>
 
       {/* form for submitting address */}
-      <form>
+      <form onSubmit={(e)=>handleClick(e)}>
         <div className={styles.head}>Enter Address Details</div>
         <div className={styles.address}>
           <div className={styles.sub}>
