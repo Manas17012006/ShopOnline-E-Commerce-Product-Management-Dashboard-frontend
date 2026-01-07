@@ -49,7 +49,7 @@ src/
 ├── context/         # Global context (Auth, User)
 ├── pages/           # Pages (Home, Login, Admin, etc.)
 ├── routes/          # Protected & public routes
-├── styles/          # CSS modules
+├── CSS              # CSS modules
 ├── utils/           # Helper functions
 ├── App.jsx
 └── main.jsx
