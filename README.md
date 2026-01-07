@@ -96,3 +96,5 @@ This video demonstrates all the functionalities of the application, showcasing b
 Email-address: none48504@gmail.com
 
 Password: January@2026
+
+Backend repository link: https://github.com/Manas17012006/ShopOnline-E-Commerce-Product-Management-Dashboard-backend
